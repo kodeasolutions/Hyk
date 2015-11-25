@@ -207,6 +207,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AvailableTripsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -214,6 +215,9 @@
     </Compile>
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AvailableTrips\AvailableTripsHandler.cs" />
+    <Compile Include="Models\AvailableTrips\Models\TripRequestAddresses.cs" />
+    <Compile Include="Models\AvailableTrips\Models\TripResponseList.cs" />
     <Compile Include="Models\Enityt_Framework_File\CAR.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
