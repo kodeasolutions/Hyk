@@ -7,21 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hyk_WebApi.Models.Enityt_Framework_File
+namespace Hyk_WebApi.Models.Entity_Framework_File
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class LOCATION
+    public partial class RATING
     {
         public int ID_ { get; set; }
-        public string PROVINCE_ { get; set; }
-        public string CITY_ { get; set; }
-        public string DISTRICT_ { get; set; }
-        public string NEIGHBOURHOOD_ { get; set; }
-        public string TYPE_ { get; set; }
-        public int TRIPID_ { get; set; }
-    
-        public virtual TRIP TRIP { get; set; }
+        public System.DateTime DATE_ { get; set; }
+        public int STARS_ { get; set; }
+        public int RATER_ID_ { get; set; }
+        public int RATEE_ID_ { get; set; }
+        public string COMMENT_ { get; set; }
     }
 }

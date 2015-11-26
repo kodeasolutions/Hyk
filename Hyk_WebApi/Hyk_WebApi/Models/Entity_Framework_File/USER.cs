@@ -7,23 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hyk_WebApi.Models.Enityt_Framework_File
+namespace Hyk_WebApi.Models.Entity_Framework_File
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PASSENGER
+    public partial class USER
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PASSENGER()
+        public USER()
         {
-            this.TRIPs = new HashSet<TRIP>();
+            this.CARDs = new HashSet<CARD>();
         }
     
         public int ID_ { get; set; }
+        public string FIRSTNAME_ { get; set; }
+        public string LASTNAME_ { get; set; }
+        public string EMAIL_ { get; set; }
+        public string CONTACT_NUMBER_ { get; set; }
+        public string PICTURE_ { get; set; }
+        public int AVERAGE_RATING_ { get; set; }
+        public System.DateTime DATE_REGISTERED_ { get; set; }
     
-        public virtual USER USER { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TRIP> TRIPs { get; set; }
+        public virtual ICollection<CARD> CARDs { get; set; }
+        public virtual PASSENGER PASSENGER { get; set; }
+        public virtual DRIVER DRIVER { get; set; }
+        public virtual PREFERENCE PREFERENCE { get; set; }
     }
 }

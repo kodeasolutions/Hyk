@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
-using Hyk_WebApi.Models.Enityt_Framework_File;
+using Hyk_WebApi.Models.Entity_Framework_File;
 
 namespace Hyk_WebApi
 {

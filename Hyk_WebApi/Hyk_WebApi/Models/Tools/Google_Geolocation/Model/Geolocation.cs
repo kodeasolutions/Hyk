@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Hyk_WebApi.Models.AvailableTrips.Models
+namespace Google.Geolocation.Api
 {
-    public class TripResponseList
+    public class Geolocation
     {
+        public List<Result> results { get; set; }
         public string status { get; set; }
+
     }
 }

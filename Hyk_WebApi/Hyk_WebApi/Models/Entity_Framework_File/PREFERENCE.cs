@@ -7,15 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hyk_WebApi.Models.Enityt_Framework_File
+namespace Hyk_WebApi.Models.Entity_Framework_File
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class CARD
+    public partial class PREFERENCE
     {
         public int ID_ { get; set; }
-        public System.DateTime DATE_ADDED_ { get; set; }
+        public bool SMOKING_ { get; set; }
+        public bool FOOD_ { get; set; }
+        public bool PETS_ { get; set; }
     
         public virtual USER USER { get; set; }
     }

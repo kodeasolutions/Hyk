@@ -7,18 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hyk_WebApi.Models.Enityt_Framework_File
+namespace Hyk_WebApi.Models.Entity_Framework_File
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class RATING
+    public partial class TRIP_MATCH
     {
         public int ID_ { get; set; }
-        public System.DateTime DATE_ { get; set; }
-        public int STARS_ { get; set; }
-        public int RATER_ID_ { get; set; }
-        public int RATEE_ID_ { get; set; }
-        public string COMMENT_ { get; set; }
+        public int PASSANGERS_TRIP_ID_ { get; set; }
+        public int DRIVERS_TRIP_ID_ { get; set; }
+        public bool ACCEPTED_ { get; set; }
+    
+        public virtual TRIP TRIP { get; set; }
+        public virtual TRIP TRIP1 { get; set; }
     }
 }

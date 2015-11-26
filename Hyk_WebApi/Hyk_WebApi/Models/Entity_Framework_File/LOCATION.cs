@@ -7,18 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Hyk_WebApi.Models.Enityt_Framework_File
+namespace Hyk_WebApi.Models.Entity_Framework_File
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class PREFERENCE
+    public partial class LOCATION
     {
         public int ID_ { get; set; }
-        public bool SMOKING_ { get; set; }
-        public bool FOOD_ { get; set; }
-        public bool PETS_ { get; set; }
+        public string PROVINCE_ { get; set; }
+        public string CITY_ { get; set; }
+        public string DISTRICT_ { get; set; }
+        public string NEIGHBOURHOOD_ { get; set; }
+        public string TYPE_ { get; set; }
+        public int TRIPID_ { get; set; }
     
-        public virtual USER USER { get; set; }
+        public virtual TRIP TRIP { get; set; }
     }
 }

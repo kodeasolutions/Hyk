@@ -218,52 +218,61 @@
     <Compile Include="Models\AvailableTrips\AvailableTripsHandler.cs" />
     <Compile Include="Models\AvailableTrips\Models\TripRequestAddresses.cs" />
     <Compile Include="Models\AvailableTrips\Models\TripResponseList.cs" />
-    <Compile Include="Models\Enityt_Framework_File\CAR.cs">
+    <Compile Include="Models\Entity_Framework_File\CAR.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\CARD.cs">
+    <Compile Include="Models\Entity_Framework_File\CARD.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\DRIVER.cs">
+    <Compile Include="Models\Entity_Framework_File\DRIVER.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\Hyk_Database_Model.Context.cs">
+    <Compile Include="Models\Entity_Framework_File\Hyk_Database_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Hyk_Database_Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\Hyk_Database_Model.cs">
+    <Compile Include="Models\Entity_Framework_File\Hyk_Database_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\Hyk_Database_Model.Designer.cs">
+    <Compile Include="Models\Entity_Framework_File\Hyk_Database_Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Hyk_Database_Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\LOCATION.cs">
+    <Compile Include="Models\Entity_Framework_File\LOCATION.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\PASSENGER.cs">
+    <Compile Include="Models\Entity_Framework_File\PASSENGER.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\PREFERENCE.cs">
+    <Compile Include="Models\Entity_Framework_File\PREFERENCE.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\RATING.cs">
+    <Compile Include="Models\Entity_Framework_File\RATING.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\TRIP.cs">
+    <Compile Include="Models\Entity_Framework_File\TRIP.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\TRIP_MATCH.cs">
+    <Compile Include="Models\Entity_Framework_File\TRIP_MATCH.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Enityt_Framework_File\USER.cs">
+    <Compile Include="Models\Entity_Framework_File\USER.cs">
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Google_Geolocation_Api.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\AddressComponent.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Geometry.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Location.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Northeast.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Result.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Geolocation.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Southwest.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\Model\Viewport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -276,13 +285,13 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Enityt_Framework_File\Hyk_Database_Model.Context.tt">
+    <Content Include="Models\Entity_Framework_File\Hyk_Database_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Hyk_Database_Model.Context.cs</LastGenOutput>
       <DependentUpon>Hyk_Database_Model.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\Enityt_Framework_File\Hyk_Database_Model.edmx.sql" />
-    <Content Include="Models\Enityt_Framework_File\Hyk_Database_Model.tt">
+    <Content Include="Models\Entity_Framework_File\Hyk_Database_Model.edmx.sql" />
+    <Content Include="Models\Entity_Framework_File\Hyk_Database_Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Hyk_Database_Model.cs</LastGenOutput>
       <DependentUpon>Hyk_Database_Model.edmx</DependentUpon>
@@ -308,11 +317,11 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\Enityt_Framework_File\Hyk_Database_Model.edmx">
+    <EntityDeploy Include="Models\Entity_Framework_File\Hyk_Database_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Hyk_Database_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Enityt_Framework_File\Hyk_Database_Model.edmx.diagram" />
+    <Content Include="Models\Entity_Framework_File\Hyk_Database_Model.edmx.diagram" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
