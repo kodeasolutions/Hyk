@@ -21,6 +21,7 @@ namespace Hyk_WebApi.Models.Entity_Framework_File
         public string NEIGHBOURHOOD_ { get; set; }
         public string TYPE_ { get; set; }
         public int TRIPID_ { get; set; }
+        public int SEQUENCE_ { get; set; }
     
         public virtual TRIP TRIP { get; set; }
     }

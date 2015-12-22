@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 11/24/2015 22:35:55
--- Generated from EDMX file: C:\Users\Ghost\Documents\Projects\GitHub\Hyk\Hyk_WebApi\Hyk_WebApi\Models\Enityt_Framework_File\Hyk_Database_Model.edmx
+-- Date Created: 12/18/2015 15:28:13
+-- Generated from EDMX file: C:\Users\Ghost\Documents\Projects\GitHub\Hyk\Hyk_WebApi\Hyk_WebApi\Models\Entity_Framework_File\Hyk_Database_Model.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -20,23 +20,23 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_CARDUSER]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CARDs] DROP CONSTRAINT [FK_CARDUSER];
 GO
+IF OBJECT_ID(N'[dbo].[FK_PASSENGERUSER]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PASSENGERs] DROP CONSTRAINT [FK_PASSENGERUSER];
+GO
 IF OBJECT_ID(N'[dbo].[FK_DRIVERCAR]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[CARs] DROP CONSTRAINT [FK_DRIVERCAR];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TRIPLOCATION]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LOCATIONs] DROP CONSTRAINT [FK_TRIPLOCATION];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PASSENGERTRIP]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[TRIPs] DROP CONSTRAINT [FK_PASSENGERTRIP];
 GO
 IF OBJECT_ID(N'[dbo].[FK_DRIVERTRIP]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TRIPs] DROP CONSTRAINT [FK_DRIVERTRIP];
 GO
 IF OBJECT_ID(N'[dbo].[FK_DRIVERUSER]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DRIVERs] DROP CONSTRAINT [FK_DRIVERUSER];
-GO
-IF OBJECT_ID(N'[dbo].[FK_PASSENGERTRIP]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[TRIPs] DROP CONSTRAINT [FK_PASSENGERTRIP];
-GO
-IF OBJECT_ID(N'[dbo].[FK_PASSENGERUSER]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[PASSENGERs] DROP CONSTRAINT [FK_PASSENGERUSER];
-GO
-IF OBJECT_ID(N'[dbo].[FK_TRIPLOCATION]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LOCATIONs] DROP CONSTRAINT [FK_TRIPLOCATION];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TRIPTRIP_MATCH]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[TRIP_MATCH] DROP CONSTRAINT [FK_TRIPTRIP_MATCH];
@@ -52,14 +52,17 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[CARDs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CARDs];
+IF OBJECT_ID(N'[dbo].[USERs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[USERs];
 GO
 IF OBJECT_ID(N'[dbo].[CARs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[CARs];
 GO
-IF OBJECT_ID(N'[dbo].[DRIVERs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[DRIVERs];
+IF OBJECT_ID(N'[dbo].[CARDs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[CARDs];
+GO
+IF OBJECT_ID(N'[dbo].[RATINGs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[RATINGs];
 GO
 IF OBJECT_ID(N'[dbo].[LOCATIONs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[LOCATIONs];
@@ -67,20 +70,17 @@ GO
 IF OBJECT_ID(N'[dbo].[PASSENGERs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PASSENGERs];
 GO
-IF OBJECT_ID(N'[dbo].[PREFERENCEs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[PREFERENCEs];
-GO
-IF OBJECT_ID(N'[dbo].[RATINGs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[RATINGs];
-GO
-IF OBJECT_ID(N'[dbo].[TRIP_MATCH]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TRIP_MATCH];
+IF OBJECT_ID(N'[dbo].[DRIVERs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DRIVERs];
 GO
 IF OBJECT_ID(N'[dbo].[TRIPs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TRIPs];
 GO
-IF OBJECT_ID(N'[dbo].[USERs]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[USERs];
+IF OBJECT_ID(N'[dbo].[PREFERENCEs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[PREFERENCEs];
+GO
+IF OBJECT_ID(N'[dbo].[TRIP_MATCH]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TRIP_MATCH];
 GO
 
 -- --------------------------------------------------
@@ -144,7 +144,8 @@ CREATE TABLE [dbo].[LOCATIONs] (
     [DISTRICT_] nvarchar(max)  NOT NULL,
     [NEIGHBOURHOOD_] nvarchar(max)  NOT NULL,
     [TYPE_] nvarchar(max)  NOT NULL,
-    [TRIPID_] int  NOT NULL
+    [TRIPID_] int  NOT NULL,
+    [SEQUENCE_] int  NOT NULL
 );
 GO
 

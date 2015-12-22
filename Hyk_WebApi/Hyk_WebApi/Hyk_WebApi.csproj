@@ -216,6 +216,10 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AvailableTrips\AvailableTripsHandler.cs" />
+    <Compile Include="Models\AvailableTrips\LinqModels\AvailableDrivers.cs" />
+    <Compile Include="Models\AvailableTrips\LinqModels\AvailablePassengers.cs" />
+    <Compile Include="Models\AvailableTrips\Models\AvailableDriverList.cs" />
+    <Compile Include="Models\AvailableTrips\Models\AvailablePassengersList.cs" />
     <Compile Include="Models\AvailableTrips\Models\TripRequestAddresses.cs" />
     <Compile Include="Models\AvailableTrips\Models\TripResponseList.cs" />
     <Compile Include="Models\Entity_Framework_File\CAR.cs">

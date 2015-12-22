@@ -117,6 +117,7 @@
     <Property Name="NEIGHBOURHOOD_" Type="nvarchar(max)" Nullable="false" />
     <Property Name="TYPE_" Type="nvarchar(max)" Nullable="false" />
     <Property Name="TRIPID_" Type="int" Nullable="false" />
+    <Property Name="SEQUENCE_" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PASSENGERs">
     <Key>
@@ -407,6 +408,7 @@
           <Property Name="TYPE_" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="TRIP" Relationship="Hyk_Database_Model.TRIPLOCATION" FromRole="LOCATION" ToRole="TRIP" />
           <Property Name="TRIPID_" Type="Int32" Nullable="false" />
+          <Property Name="SEQUENCE_" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="PASSENGER">
           <Key>
@@ -614,6 +616,7 @@
           <ScalarProperty Name="NEIGHBOURHOOD_" ColumnName="NEIGHBOURHOOD_" />
           <ScalarProperty Name="TYPE_" ColumnName="TYPE_" />
           <ScalarProperty Name="TRIPID_" ColumnName="TRIPID_" />
+          <ScalarProperty Name="SEQUENCE_" ColumnName="SEQUENCE_" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
