@@ -9,8 +9,7 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
 {
     public class AvailableDrivers
     {
-
-        public List<AvailableDriverList> find(List<LOCATION> listOfRequestLocations, string status)
+        public List<AvailableDriverList> find(List<LOCATION> listOfRequestLocations, ref string status)
         {
             if (listOfRequestLocations == null) return null;
 
@@ -30,7 +29,7 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
                     return CurrespondingUserTripFromDB;
                 }
 
-                if (matchingLocationsFromDB != null) //update status
+                if (matchingLocationsFromDB == null) //update status
                 {
                     status = "NoMatchFound";
                 }
@@ -72,8 +71,6 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
                         }
                     }
                 }
-
-
                 return null;
             }
         }

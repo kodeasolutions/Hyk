@@ -14,7 +14,7 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
         List<AvailablePassengersList> CurrespondingUserTripFromDB = new List<AvailablePassengersList>();
 
 
-        public List<AvailablePassengersList> find(List<LOCATION> listOfRequestLocations,string status)
+        public List<AvailablePassengersList> find(List<LOCATION> listOfRequestLocations, ref string status)
         {
             if (listOfRequestLocations == null) return null;
 
@@ -26,7 +26,7 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
                 return CurrespondingUserTripFromDB;
             }
 
-            if (matchingLocationsFromDB != null) //update status
+            if (matchingLocationsFromDB == null) //update status
             {
                 status = "NoMatchFound";
             }
@@ -36,7 +36,6 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
 
         private List<LOCATION> lookupMatchingLocationsInDB(List<LOCATION> listOfRequestLocations)
         {
-
             List<LOCATION> tempMatch = new List<LOCATION>();
 
             using (Hyk_Database_ModelContainer context = new Hyk_Database_ModelContainer())
@@ -76,9 +75,9 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
                             }
                         }
                     }
-                    return tempMatch;
+                    if(tempMatch.Any())return tempMatch;
                 }
-            }
+            }     
             return null;
         }
 
@@ -111,7 +110,5 @@ namespace Hyk_WebApi.Models.AvailableTrips.LinqModels
             }
             return listDriverTripInfo;
         }
-
-
     }
 }

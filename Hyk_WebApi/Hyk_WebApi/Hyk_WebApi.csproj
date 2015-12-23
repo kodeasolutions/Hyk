@@ -268,6 +268,9 @@
       <DependentUpon>Hyk_Database_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Tools\Addresses.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\AddressStringToGeolocation.cs" />
+    <Compile Include="Models\Tools\Google_Geolocation\GeolocationToDBLocation.cs" />
     <Compile Include="Models\Tools\Google_Geolocation\Google_Geolocation_Api.cs" />
     <Compile Include="Models\Tools\Google_Geolocation\Model\AddressComponent.cs" />
     <Compile Include="Models\Tools\Google_Geolocation\Model\Geometry.cs" />
